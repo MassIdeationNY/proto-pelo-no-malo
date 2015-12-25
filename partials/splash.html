@@ -1,10 +1,15 @@
-
-<section class="splashpage">
+<style>
+	.splashpage {
+		background: pink;
+	}
+</style>
+<section class="splashpage"  ng-hide="hidden" ng-class="{fade: startFade }">
 	<img src="http://placehold.it/350x150" width="100%">
-	<br><br><br><br><br><br><br>
+	<br><br><br><br><button ng-click="hideStuff()">Skip Intro</button><br><br><br>
 	<p>In Partnership with:</p>
 	<!-- Show Video Player -->
 	<div class="grid-area">
 		grid area
 	</div>
+
 </section>

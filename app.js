@@ -59,7 +59,7 @@ app.config(['$routeProvider', function($routeProvider) {
     });
 }]);//end route provider
 
-app.controller("HomeController", function($scope,  $http, $location ){
+app.controller("HomeController", function($scope,  $http, $location, $timeout ){
   console.log("HomeController");
 
   var unitArray = [];
@@ -75,8 +75,15 @@ app.controller("HomeController", function($scope,  $http, $location ){
         $location.path( path );
       };
 
-   $scope.pageClass = 'page-home';
-   
+       $scope.hideStuff = function () {
+        $scope.startFade = true;
+        $timeout(function(){
+            $scope.hidden = true;
+            $location.path( 'menu' )
+        }, 2000);
+        
+     };
+
 })
 .directive('helloWorld', function(){
   return {
