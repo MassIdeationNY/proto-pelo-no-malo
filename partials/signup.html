@@ -1,0 +1,71 @@
+<section class="signuppage">
+	<center><h2 class="title">Sign Up</h2></center>
+	<div hello-world></div>
+	<!-- Show Video Player -->
+	
+	<form novalidate class="simple-form">
+			    First Name: <input type="text" ng-model="user.firstname" /><br />
+			    Last Name: <input type="text" ng-model="user.firstname" /><br />
+			    E-mail: <input type="email" ng-model="user.email" /><br />
+			    Gender: <input type="radio" ng-model="user.gender" value="male" />male
+			    <input type="radio" ng-model="user.gender" value="female" />female<br />
+			    <br/>
+			    What do you consider yourself to be?<br>
+			    <select name="singleSelect" id="singleSelect1" ng-model="data.meSelect" label="One">
+			      <option value="">---Please select---</option> <!-- not selected / blank option -->
+			      <option value="{{data.option1}}">African American</option> <!-- interpolation -->
+			      <option value="option-2">Hispanic</option>
+			      <option value="option-3">Mongolian</option>
+			      <option value="option-4">Caucasion</option>
+			      <option value="option-5">Native American</option>
+			    </select><br><br>
+			    What do you consider your child to be?<br>
+			    <select name="singleSelect" id="singleSelect2" ng-model="data.idSelect" label="Two">
+			      <option value="">---Please select---</option> <!-- not selected / blank option -->
+			      <option value="{{data.option1}}">African American</option> <!-- interpolation -->
+			      <option value="option-2">Hispanic</option>
+			      <option value="option-3">Mongolian</option>
+			      <option value="option-4">Caucasion</option>
+			      <option value="option-5">Native American</option>
+			    </select><br><br>
+			    Your Childs Age<br>
+			     <select name="childsAgeSelect" id="singleSelect3" ng-model="data.idSelect"  width="50%" label="Three">
+			      <option value="">---Please select---</option> <!-- not selected / blank option -->
+			      <option value="{{data.option1}}">1</option> <!-- interpolation -->
+			      <option value="option-2">5</option>
+			      <option value="option-3">10</option>
+			      <option value="option-4">15</option>
+			      <option value="option-5">20</option>
+			    </select><br><br>
+			    Your Age?<br>
+			     <select name="parentSelect" id="singleSelect4" ng-model="data.idSelect" width="50%">
+			      <option value="">---Please select---</option> <!-- not selected / blank option -->
+			      <option value="{{data.option1}}">18</option> <!-- interpolation -->
+			      <option value="option-2">25</option>
+			      <option value="option-3">30</option>
+			      <option value="option-4">35</option>
+			      <option value="option-5">40</option>
+			    </select><br><br>
+			    What do you consider your hairstyle to be?<br>
+			    <select name="parenthairSelect" id="singleSelect5" ng-model="data.idSelect">
+			      <option value="">---Please select---</option> <!-- not selected / blank option -->
+			      <option value="{{data.option1}}">African American</option> <!-- interpolation -->
+			      <option value="option-2">Hispanic</option>
+			      <option value="option-3">Mongolian</option>
+			      <option value="option-4">Caucasion</option>
+			      <option value="option-5">Native American</option>
+			    </select><br><br>
+			    What do you consider your child's hairstyle to be?<br>
+			    <select name="childshairSelect" id="singleSelect6" ng-model="data.idSelect">
+			      <option value="">---Please select---</option> <!-- not selected / blank option -->
+			      <option value="{{data.option1}}">African American</option> <!-- interpolation -->
+			      <option value="option-2">Hispanic</option>
+			      <option value="option-3">Mongolian</option>
+			      <option value="option-4">Caucasion</option>
+			      <option value="option-5">Native American</option>
+			    </select><br>
+			  </form>
+	<center>
+		<button type="submit" value="ButtonOne" ng-click="go('/menu')">Submit</button>
+		<p></p>
+</section>
