@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -108,7 +108,41 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-  ;
+     /*  subpages - login, setup -- */
+     .state('app.login', {
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+
+    .state('app.signup', {
+      url: '/signup',
+      views: {
+        'menuContent': {
+          templateUrl: 'partials/signup.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+
+    /* game pages */
+    .state('app.game2', {
+      url: '/game2',
+      views: {
+        'menuContent': {
+          templateUrl: 'partials/game2.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+  ;/* keep semi-colon anchor here...  */
+
+
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });

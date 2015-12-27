@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $location ) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -39,6 +39,13 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+//The End of the Beginning
+   $scope.go = function ( path ) {
+        console.log("click for new view: " + path );
+        $location.path( path );
+      };
+
 })
 
 .controller('PlaylistsCtrl', function($scope) {
